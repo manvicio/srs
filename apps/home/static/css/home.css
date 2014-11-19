@@ -1,7 +1,8 @@
 .font-size-4-3 {
   font-size: 4.3em;
 }
-#title-team {
+#title-team,
+#title-about {
   font-family: 'Fjalla One', sans-serif;
   letter-spacing: 5px;
 }
@@ -11,6 +12,12 @@
 }
 .margen-bottom-medio {
   margin-bottom: 0.5em;
+}
+.margen-top-medio {
+  margin-top: 0.5em;
+}
+.margen-top-dos {
+  margin-top: 2em;
 }
 #header-slider {
   height: 600px;
@@ -79,6 +86,12 @@
 #cont-team {
   border-left: 1px solid #d9dada;
   padding-left: 3em;
+}
+#about {
+  border-top: 1px solid #d9dada;
+}
+#about-cont #about {
+  padding: 3em 0;
 }
 .bg-color-sunflower {
   background-color: #f1c40f;
