@@ -1,0 +1,208 @@
+{% extends 'base2.html' %}
+
+{% load static from staticfiles %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<style>
+		.relleno-both-lateral-3{
+			padding-left: 5em !important;
+			padding-right: 0 !important;
+		}
+
+		.banner { position: relative; overflow: auto; }
+    	.banner li { list-style: none; }
+        .banner ul li { float: left; }
+        .banner ul {
+        	padding: 0;
+        	margin: 0 1px;
+        }
+
+        .contenedor-arrow-team{
+			width: 100%;
+			position: relative;
+			left: 0;
+			right: 0;
+			top: -120px;
+        }
+
+        .contenedor-arrow-team .prev{
+			float: left;
+
+        }
+
+        .contenedor-arrow-team .next{
+			float: right;
+        }
+	
+		.slider-team-true{
+			padding-left: 10em;
+			padding-right: 10em;
+		}
+	
+	
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block main %}
+<section id="principal-group">
+	<div class="container-srs">
+		<div class="row">
+			<div class="col-md-6" id="title-team">
+				<h1 class="font-size-4-3"><strong>MEET THE <br>TEAM<span class="color-texto-sunflower">.</span></strong></h1>
+			</div>
+			<div class="col-md-6" id='cont-team'>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias neque laudantium aliquid eos modi, itaque! Blanditiis eum voluptatibus omnis, in fuga unde laudantium suscipit, quae, minima similique eaque est labore?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, rerum, quisquam veritatis distinctio omnis est eius laborum molestiae iste facere nemo. Dolorem iusto vitae sunt, sed velit quis nulla optio. 
+			</div>
+		</div>
+	</div>
+</section>
+<section id="slider-team">
+	
+	<div class="slider-team-true">
+		<div class="banner">
+		    <ul>
+		        <li>
+		        	<div class="row">
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<div class="thumbnail">
+						      <img src="{% static 'img/layer1.png' %}">
+						      <div class="caption">
+						        <h4 class="text-center">JHON DOE</h4>
+						        <h5 class="text-center">MANAGER</h5>
+						        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum eos fugiat dicta rerum, vel nam commodi, fugit aut debitis quos eaque praesentium repellat, id asperiores explicabo omnis recusandae velit non.</p>
+						        <p>
+						        	<a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a>
+						        </p>
+						      </div>
+						    </div>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/layer2.png' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/layer3.png' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/layer4.png' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        	</div>
+		        	
+
+		        </li>
+		        <li>
+		        	<div class="row">
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        	</div>
+		        </li>
+		        <li>
+		        	<div class="row">
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div> 
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        		<div class="col-md-3 relleno-lateral-q">
+		        			<figure>
+				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
+				        	</figure>
+				        	<p class="color-texto-sunflower">
+				        		<b>Proyecto 1</b>
+				        	</p>
+		        		</div>
+		        	</div>
+		        </li>
+		    </ul>
+		</div>
+	<div>
+	
+</section>
+<div class="contenedor-arrow-team">
+			<button href="#" class="unslider-arrow prev"><span class="icon-arrow-left"></span></button>
+			<button href="#" class="unslider-arrow next"><span class="icon-uniE601"></span></button>
+		</div>
+{% endblock %}
+
+{% block js %}
+	<script src="{% static 'js/vendor/unslider.min.js' %}"></script>
+	<script>
+		$(function() {
+		    var unslider = $('.banner').unslider();
+	    
+		    $('.unslider-arrow').click(function() {
+		        var fn = this.className.split(' ')[1];
+		        
+		        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+		        unslider.data('unslider')[fn]();
+		    });
+		});
+	</script>
+{% endblock %}

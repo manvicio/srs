@@ -1,0 +1,54 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	padding: 0;
+	margin: 0;
+}
+
+.cont-logo-super,
+.cont-logo-derecho {
+  padding: 0.5em 0;
+  position: absolute;
+}
+.cont-logo-super {
+  left: 0;
+}
+.cont-logo-derecho {
+  right: 0;
+}
+
+.logoderecho{
+	height: 34px;
+	margin-left: 160px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
