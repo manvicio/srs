@@ -11,3 +11,7 @@ class GroupView(TemplateView):
 
 	template_name = 'group.html'
 
+class ExpertiseView(TemplateView):
+
+	template_name = 'expertise.html'
+

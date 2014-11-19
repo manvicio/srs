@@ -2,7 +2,8 @@
   font-size: 4.3em;
 }
 #title-team,
-#title-about {
+#title-about,
+#title-expertise {
   font-family: 'Fjalla One', sans-serif;
   letter-spacing: 5px;
 }
@@ -15,6 +16,9 @@
 }
 .margen-top-medio {
   margin-top: 0.5em;
+}
+.margen-top-uno {
+  margin-top: 1em;
 }
 .margen-top-dos {
   margin-top: 2em;
