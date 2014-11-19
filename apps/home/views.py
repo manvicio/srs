@@ -15,3 +15,10 @@ class ExpertiseView(TemplateView):
 
 	template_name = 'expertise.html'
 
+class ContactUsView(TemplateView):
+
+	template_name = 'contact-us.html'
+
+class CareersView(TemplateView):
+
+	template_name = 'careers.html'

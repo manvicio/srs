@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+{% load static from staticfiles %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<style>
+		.relleno-both-lateral-3{
+			padding-left: 5em !important;
+			padding-right: 0 !important;
+		}
+	</style>
+{% endblock %}
