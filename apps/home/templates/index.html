@@ -54,38 +54,18 @@
 		    <ul>
 		        <li>
 		        	<div class="row">
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/layer1.png' %}" width="100%" class="img-slider" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/layer2.png' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/layer3.png' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/layer4.png' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
+		        		{% for proyecto in proyectos %}
+							<div class="col-md-3 relleno-lateral-p">
+			        			<figure>
+					        		<img src="{{proyecto.imagen}}" width="100%" class="img-slider">
+					        	</figure>
+					        	<p class="color-texto-sunflower">
+					        		<b>{{proyecto.nombre_proyecto}}</b>
+					        	</p>
+			        		</div>
+						{% endfor %}
+		        		
+		        		
 		        	</div>
 		        	
 
@@ -165,16 +145,21 @@
 		    </ul>
 		</div>
 		
-		
+	
 		
 
 
 	</div>
+
 	<div class="contenedor-arrow">
 			<button href="#" class="unslider-arrow prev"><span class="icon-arrow-left"></span></button>
 			<button href="#" class="unslider-arrow next"><span class="icon-uniE601"></span></button>
 		</div>
 </section>
+{% for proyecto in proyectos %}
+		<h2>{{proyecto.nombre_proyecto}}</h2>
+		<p>{{proyecto.contenido_proyecto}}</p>
+	{% endfor %}	
 
 {% endblock %}
 

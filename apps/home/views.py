@@ -1,11 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from apps.projects.models import Proyecto
 
 # Create your views here.
 
-class HomeView(TemplateView):
+class HomeView(ListView):
 	
 	template_name = 'index.html'
+	model = Proyecto
+	context_object_name = 'proyectos'
 
 class GroupView(TemplateView):
 
