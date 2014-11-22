@@ -1,9 +1,14 @@
 .font-size-4-3 {
   font-size: 4.3em;
 }
+.font-size-3 {
+  font-size: 3em;
+}
 #title-team,
 #title-about,
-#title-expertise {
+#title-expertise,
+#title-careers,
+#subtitle-careers {
   font-family: 'Fjalla One', sans-serif;
   letter-spacing: 5px;
 }
@@ -78,18 +83,33 @@
   width: 76%;
   margin: 0 auto;
 }
-#principal-group {
+#principal-group,
+#principal-careers {
   padding: 3em 0;
 }
 #cont-team,
 #title-team {
-  height: 200px;
-  border-bottom: 1px solid #d9dada;
   padding-top: 2em;
 }
 #cont-team {
   border-left: 1px solid #d9dada;
   padding-left: 3em;
+}
+#cont-img-careers {
+  border-left: 1px solid #d9dada;
+}
+#cont-img-careers,
+#title-careers,
+#title-team,
+#cont-team {
+  height: 200px;
+  border-bottom: 1px solid #d9dada;
+}
+#title-careers {
+  padding-top: 4em;
+}
+#cont-img-careers {
+  padding-left: 2em;
 }
 #about {
   border-top: 1px solid #d9dada;
@@ -121,6 +141,12 @@
   color: #fff;
   font-size: 1.5em;
 }
+.btn {
+  border-radius: 0px;
+}
+.btn-default {
+  background-color: #f1c40f;
+}
 .navbar-default {
   background-color: #34495e;
   border-color: rgba(231,231,231,0);
@@ -133,4 +159,22 @@
 }
 .thumbnail {
   border: 0px;
+}
+.control-label {
+  text-align: left !important;
+}
+.form-control {
+  height: 34px;
+  background-color: rgba(52,73,94,0.2);
+  border: 1px solid #34495e;
+  border-radius: 0px;
+}
+.btn {
+  border-radius: 0px;
+  padding: 2px 16px;
+  margin-left: 7em;
+}
+.btn-default {
+  background-color: #f1c40f;
+  border: 0;
 }
