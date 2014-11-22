@@ -36,6 +36,65 @@ h6{
 	margin-left: 160px;
 }
 
+#footer{
+  padding: 3em 0;
+}
+
+.navbar-default{
+  background-color: #34495e;
+  border-color: rgba(231, 231, 231, 0);
+}
+  
+.navbar-default .navbar-nav li a{
+  color: white;
+}
+  
+.navbar-default .navbar-nav li a:hover{
+  color: #f1c40f;
+}
+
+.bg-color-sunflower{
+  background-color: #f1c40f;
+}
+
+.title-especial{
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 5px;
+}
+
+.title-especial-2{
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.font-size-4-3{
+
+  font-size: 4.3em;
+}
+
+.font-size-3{
+
+  font-size: 3em;
+}
+
+.secciones{
+  padding: 2em 0;
+}
+
+.color-texto-sunflower{
+  color: #f1c40f;
+}
+
+.margen-top-dos{
+  margin-top: 2em;
+}
+
+  
+.margen-top-uno{
+  margin-top: 1em; 
+}
+    
+
 
 
 
