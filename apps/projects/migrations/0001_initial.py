@@ -16,6 +16,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('nombre_proyecto', models.CharField(max_length=45)),
                 ('contenido_proyecto', models.TextField(max_length=200)),
+                ('imagen', models.ImageField(null=True, upload_to=b'media', blank=True)),
             ],
             options={
             },
