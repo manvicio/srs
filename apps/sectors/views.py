@@ -4,6 +4,6 @@ from .models import Sector
 
 # Create your views here.
 
-class SectorDetalle(DetailView):
+class SectorDetalleView(DetailView):
 	template_name = "sector_detalle.html"
 	model = Sector

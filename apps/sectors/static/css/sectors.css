@@ -1,0 +1,9 @@
+#header-detalle-sector{
+	background: url("../img/sectors.png") center no-repeat;
+  	background-size: cover;
+  	height: 280px;
+}
+
+.mayuscula{
+	text-transform: uppercase;
+}

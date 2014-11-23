@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'srs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'srs',
+        'NAME': 'srs_proyecto',
         'USER': 'postgres',
         'PASSWORD': 'medina11',
         'HOST': 'localhost',

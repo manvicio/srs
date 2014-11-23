@@ -3,7 +3,7 @@
 {% load static from staticfiles %}
 
 {% block css %}
-
+	<link rel="stylesheet" href="{% static 'css/services.css' %}">
 	<style>
 		.relleno-both-lateral-3{
 			padding-left: 5em !important;
@@ -16,7 +16,7 @@
 {% block main %}
 
 <header id="header-services">
-	<img src="{% static 'img/portada.jpg' %}" width="100%" height="280px">
+	
 </header>
 <section class="secciones" >
 	<div class="container">
@@ -45,18 +45,13 @@
 			<div class="col-md-6 col-md-offset-3">
 				<div class="row">
 					<div class="col-md-6">
-						<p>Project Management</p>
-						<p>Site Master Planning</p>
-						<p>General Site Civil Engineering</p>
-						<p>Structural Engineering</p>
-						<p>Site/Land Development</p>
-						<p>Roadway Design</p>
-						<p>Drainage & Stormwater Systems</p>
-						<p>Sanitary Sewer Systems</p>
-						<p>Water Distribution Systems</p>
-						<p>Pump Station Design</p>
+						{% for servicio in servicios %}
+						<p>{{servicio.nombre_servicio}}</p>
+						{% endfor %}
+						
 					</div>
 					<div class="col-md-6">
+						
 						<p>Lake Excavations / Land Fill</p>
 						<p>Marine/Coastal Engineering</p>
 						<p>Environmental Engineering</p>
@@ -76,39 +71,12 @@
 		<div class="row margen-top-uno">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="row">
+					{% for sector in sectores %}
 					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">AVIATION</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
+						<h5 class="text-center title-especial-2 margen-top-uno upper"><a href="/sectors/{{sector.slug}}" class="a-null-sector">{{sector.nombre_sector}}</a></h5>
+						{{sector.descripcion}}
 					</div>
-					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">ROADWAY AND TRANSPORTATION</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
-					</div>
-					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">ENVIRONMENTAL ENGINEERING STUDIES</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
-					</div>
-					
-					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">WATER SUPPLY AND WASTEWATER SYSTEMS</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
-					</div>
-					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">STRUCTURAL ENGINEERING</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
-					</div>
-					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">DRAINAGE SYSTEMS</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
-					</div>
-					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">CONSTRUCTION PHASE SYSTEMS</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
-					</div>
-					<div class="col-md-6">
-						<h5 class="text-center title-especial-2 margen-top-uno">LAND DEVELOPMENT</h5>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae reiciendis harum deleniti assumenda, fuga quis accusantium beatae delectus quidem sunt labore, pariatur, aut vero perferendis cupiditate qui id laboriosam inventore.
-					</div>
+					{% endfor %}
 				</div>
 			</div>
 		</div>
@@ -125,7 +93,7 @@
 			<div class="col-md-6">
 				<div class="media">
 				  <a class="pull-left" href="#">
-				    <img src="{% static 'img/layer2.png' %}" width="64px" style="margin-top:2em">
+				    <img src="{% static 'img/license2.png' %}" width="64px" style="margin-top:2em">
 				  </a>
 				  <div class="media-body">
 				    <h4 class="media-heading"><b>MIAMI-DADE COUNTY</b></h4>
@@ -153,7 +121,7 @@
 			<div class="col-md-6">
 				<div class="media">
 				  <a class="pull-left" href="#">
-				    <img src="{% static 'img/layer2.png' %}" width="64px" style="margin-top:2em">
+				    <img src="{% static 'img/license1.png' %}" width="64px" style="margin-top:2em">
 				  </a>
 				  <div class="media-body">
 				    <h4 class="media-heading"><b>FLORIDA DEPARTMENT OF TRANSPORTATION</b></h4>
@@ -187,7 +155,7 @@
 			<div class="col-md-6 col-md-offset-3">
 				<div class="media">
 				  <a class="pull-left" href="#">
-				    <img src="{% static 'img/layer2.png' %}" width="64px">
+				    <img src="{% static 'img/award1.png' %}" width="64px">
 				  </a>
 				  <div class="media-body">
 				    <p class="text-center">Latin Builders Association (LBA) Engineering Design Firm of the Year 2014</p>
@@ -196,7 +164,7 @@
 				</div>
 				<div class="media">
 				  <a class="pull-left" href="#">
-				    <img src="{% static 'img/layer2.png' %}" width="64px">
+				    <img src="{% static 'img/award3.png' %}" width="64px">
 				  </a>
 				  <div class="media-body">
 				    <p class="text-center">2003, 2006, 2008, 2011, & 2012 Top 100 Minority Businesses, Greater Miami Chamber of Commerce</p>
@@ -206,7 +174,7 @@
 				</div>
 				<div class="media">
 				  <a class="pull-left" href="#">
-				    <img src="{% static 'img/layer2.png' %}" width="64px">
+				    <img src="{% static 'img/award2.png' %}" width="64px">
 				  </a>
 				  <div class="media-body">
 				    <p class="text-center">Inc. 500 America's Fastest-Growing Private Companies, Serralta Rebull Serig, Inc. was ranked #152</p>

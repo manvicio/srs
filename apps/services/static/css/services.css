@@ -1,0 +1,13 @@
+#header-services{
+	background: url("../img/services1.png") center no-repeat;
+  	background-size: cover;
+  	height: 280px;
+}
+
+.upper{
+	text-transform: uppercase;
+}
+
+.a-null-sector, .a-null-sector:hover{
+	color: #333;
+}

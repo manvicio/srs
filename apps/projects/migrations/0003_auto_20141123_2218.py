@@ -7,14 +7,14 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('projects', '0001_initial'),
+        ('projects', '0002_proyecto_imagen'),
     ]
 
     operations = [
-        migrations.AddField(
+        migrations.AlterField(
             model_name='proyecto',
             name='imagen',
-            field=models.ImageField(null=True, upload_to=b'media', blank=True),
-            preserve_default=True,
+            field=models.ImageField(default=1, upload_to=b'media'),
+            preserve_default=False,
         ),
     ]
