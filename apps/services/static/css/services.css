@@ -8,6 +8,10 @@
 	text-transform: uppercase;
 }
 
-.a-null-sector, .a-null-sector:hover{
+.a-null-sector{
 	color: #333;
+}
+
+.a-null-sector:hover{
+	color: #f1c40f;
 }

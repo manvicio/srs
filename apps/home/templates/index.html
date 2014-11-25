@@ -11,7 +11,7 @@
         .banner ul li { float: left; }
         .banner ul {
         	padding: 0;
-        	margin: 0 11.7px;
+        	margin: 0 0px;
         }
 	</style>
 {% endblock %}
@@ -51,104 +51,32 @@
 	</div>
 	<div class="slider-principal-true">
 		<div class="banner">
-		    <ul>
-		        <li>
-		        	<div class="row">
-		        		{% for proyecto in proyectos %}
-							<div class="col-md-3 relleno-lateral-p">
-			        			<figure>
-					        		<img src="{{proyecto.imagen}}" width="100%" class="img-slider">
-					        	</figure>
-					        	<p class="color-texto-sunflower">
-					        		<b>{{proyecto.nombre_proyecto}}</b>
-					        	</p>
-			        		</div>
-						{% endfor %}
-		        		
-		        		
-		        	</div>
-		        	
 
-		        </li>
-		        <li>
-		        	<div class="row">
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        	</div>
-		        </li>
-		        <li>
-		        	<div class="row">
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div> 
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-p">
-		        			<figure>
-				        		<img src="{% static 'img/main-foto.jpg' %}" width="100%" class="img-slider">
-				        	</figure>
-				        	<p class="color-texto-sunflower">
-				        		<b>Proyecto 1</b>
-				        	</p>
-		        		</div>
-		        	</div>
-		        </li>
-		    </ul>
+			<ul>
+			    <li>
+			    	
+			    	{% for proyecto in proyectos %}
+
+			    		<div class="col-md-3 relleno-lateral-p">
+			    			<figure>
+					        	<img src="{{MEDIA_URL}}{{proyecto.imagen}}" width="100%" class="img-slider">
+					        </figure>
+			        		<p class="color-texto-sunflower">
+					        	<b>{{proyecto.nombre_proyecto}}</b>
+					        </p>
+						</div>
+					
+			    	{% if forloop.counter|divisibleby:4 %}
+					
+			    </li>
+			    <li>
+			    {% endif %}
+
+			    {% endfor %}
+			    </li>
+			</ul>
+			        			
 		</div>
-		
-	
-		
-
-
 	</div>
 
 	<div class="contenedor-arrow">

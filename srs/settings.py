@@ -31,6 +31,8 @@ TEMPLATE_DIRS = [BASE_DIR.child('templates')]
 # Application definition
 
 INSTALLED_APPS = (
+    'django_admin_bootstrapped.bootstrap3',
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,7 +92,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 MEDIA_URL = 'http://localhost:8000/media/'
-MEDIA_ROOT = [BASE_DIR.child('media')]
+MEDIA_ROOT = BASE_DIR.child('media')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR.child('static')]
