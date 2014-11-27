@@ -43,6 +43,9 @@ INSTALLED_APPS = (
     'apps.projects',
     'apps.services',
     'apps.sectors',
+    'apps.team',
+    'apps.licenses',
+    'apps.awards',
 )
 
 MIDDLEWARE_CLASSES = (

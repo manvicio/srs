@@ -46,7 +46,16 @@
 				<img src="{% static 'img/layer1.png' %}" width="100%" height="350px">
 				<h1 class=" text-center margen-top-uno"><a href="/services" class="color-texto-sunflower a-null">SERVICES</a></h1>
 				<p class="text-justify margen-top-uno">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est nobis aut repudiandae? Cupiditate officiis nisi minima excepturi ratione voluptate error repellat necessitatibus, sunt illum laborum, ullam accusantium soluta explicabo!
+					{% if text_services %}
+						{% for text in text_services %}
+							{{text.contenido}}
+						{% endfor %}
+					{% else %}
+						<div class="alert alert-warning text-center" role="alert">
+							<b>Empty text for Services!</b> - <a href="/admin">Add text.</a>
+						</div>
+					
+					{% endif %}
 				</p>
 				<div class="lista margen-top-uno text-center">
 					
@@ -60,16 +69,28 @@
 				<img src="{% static 'img/layer6.png' %}" width="100%" height="350px">
 				<h1 class="color-texto-sunflower text-center margen-top-uno">PROJECTS</h1>
 				<p class="text-justify margen-top-uno">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ipsam error modi vitae corporis quam, culpa! Quod dolorum perspiciatis cupiditate molestiae. Odio inventore nemo vitae, pariatur, aliquam animi numquam earum.
+					{% if text_projects %}
+						{% for text in text_projects %}
+							{{text.contenido}}
+						{% endfor %}
+					{% else %}
+						<div class="alert alert-warning text-center" role="alert">
+							<b>Empty text for Projects!</b> - <a href="/admin">Add text.</a>
+						</div>
+					{% endif %}
 				</p>
 				<div class="lista margen-top-uno text-center">
-					
-						<p>AVIATION</p>
-						<p>CONSTRUCTION MANAGEMENT</p>
-						<p>EDUCATIONAL</p>
-						<p>MUNICIPAL</p>
-						<p>ROADWAY</p>
-						<p>WATER Y SEWER</p>
+						{% if projects %}
+							{% for project in projects %}
+								<p>{{project.nombre_proyecto}}</p>
+							{% endfor %}
+						{% else %}
+							<div class="alert alert-warning text-center" role="alert">
+								<b>Empty list of Projects!</b> - <a href="/admin">Add Projects.</a>
+							</div>
+						
+						{% endif %}
+						
 					
 				</div>
 			</div>

@@ -50,6 +50,7 @@
 		</div>
 	</div>
 	<div class="slider-principal-true">
+		{% if proyectos %}
 		<div class="banner">
 
 			<ul>
@@ -77,12 +78,21 @@
 			</ul>
 			        			
 		</div>
-	</div>
 
+	</div>
 	<div class="contenedor-arrow">
 			<button href="#" class="unslider-arrow prev"><span class="icon-arrow-left"></span></button>
 			<button href="#" class="unslider-arrow next"><span class="icon-uniE601"></span></button>
 		</div>
+
+	{% else %}
+		<div class="alert alert-warning text-center" role="alert">
+			<b>Empty list of Key Projects!</b> - <a href="/admin">Add Projects.</a>
+		</div>
+
+	{% endif %}
+
+	
 </section>
 	
 

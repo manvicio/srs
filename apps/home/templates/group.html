@@ -19,27 +19,7 @@
         	margin: 0 1px;
         }
 
-        .contenedor-arrow-team{
-			width: 100%;
-			position: fixed;
-			left: 0;
-			right: 0;
-			top: -380px;
-        }
-
-        .contenedor-arrow-team .prev{
-			float: left;
-
-        }
-
-        .contenedor-arrow-team .next{
-			float: right;
-        }
-	
-		.slider-team-true{
-			padding-left: 10em;
-			padding-right: 10em;
-		}
+        
 	
 	
 	</style>
@@ -61,121 +41,55 @@
 </section>
 <section id="slider-team">
 	
-	<div class="slider-team-true">
-		<div class="banner">
-		    <ul>
-		        <li>
+	<div class="container-srs">
+
 		        	<div class="row">
-		        		<div class="col-md-3 relleno-lateral-q">
+						{% for miembro in miembros %}	
+
+		        		<div class="col-md-3">
 		        			<div class="thumbnail">
-						      <img src="{% static 'img/serralta.png' %}" width="100%" style="height:200px !important" class="img-slider">
+						      <img src="{{MEDIA_URL}}{{miembro.imagen}}" width="100%" style="height:200px !important" class="img-slider">
 						      <div class="caption">
-						        <h4 class="text-center">IGNACIO SERRALTA</h4>
-						        <h5 class="text-center margen-top-medio color-texto-silver">President</h5>
-						        <p class="text-center margen-top-medio">A principal with principles.  Leading the team is President and Founder- Ignacio .  With 25 years of civil engineering experience in planning, design and management, Registered Civil Engineering Licenses in both California and Florida, in addition to numerous certifications, awards and honors- it's ... <a href="#">Ver más</a></p>
+						        <h5 class="text-center">{{miembro.nombre}}</h5>
+						        <h5 class="text-center margen-top-medio color-texto-silver">{{miembro.cargo}}</h5>
+						        <p class="text-center margen-top-medio">{{miembro.bio|slice:":100"}} ... <a href="#">Ver más</a></p>
 						        <p class="text-center margen-top-medio">
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
+						        	{% for red in miembro.redes_sociales.all %}
+						        	<a href="{{red.red}}" class="btn btn-default btn-xs" role="button">
+						        		{% if "facebook" in red.red %}
+						        		<span class="icon-facebook"></span>
+						        		{% endif %}
+						        		{% if "google" in red.red %}
+						        		<span class="icon-googleplus"></span>
+						        		{% endif %}
+						        		{% if "twitter" in red.red %}
+						        		<span class="icon-twitter"></span>
+						        		{% endif %}
+						        		
 						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
+						        	{% endfor %}
 						        </p>
 						      </div>
 						    </div>
 		        		</div>
-		        		<div class="col-md-3 relleno-lateral-q">
-		        			<div class="thumbnail">
-						      <img src="{% static 'img/jean.png' %}" width="100%" style="height:200px !important" class="img-slider">
-						      <div class="caption">
-						        <h4 class="text-center">JEAN-CLAUDE FONTANEAU</h4>
-						        <h5 class="text-center margen-top-medio color-texto-silver">Project Manager</h5>
-						        <p class="text-center margen-top-medio">Detail in design. Bold and Focused.  Mr. Fontaneau has over 17 years of industry experience in civil engineering design.  He specializes in roadway, water and sewer installations, industrial facilities and land development design. With a keen eye for innovative design and the ability to produce solutions ... <a href="#">Ver más</a></p>
-						        <p class="text-center margen-top-medio">
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
-						        </p>
-						      </div>
-						    </div>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-q">
-		        			<div class="thumbnail">
-						      <img src="{% static 'img/olivero.png' %}" width="100%" style="height:200px !important" class="img-slider">
-						      <div class="caption">
-						        <h4 class="text-center">OLIVERO SANCHEZ</h4>
-						        <h5 class="text-center margen-top-medio color-texto-silver">Vice President</h5>
-						        <p class="text-center margen-top-medio">A world of experience. With over 30 years of industry experience from engineering to design in both public and private sectors throughout the United States, Mexico, the Caribbean and Spain- Mr. Sanchez is a key asset to the success of SRS. His many years of field experience with government agencies, construction ... <a href="#">Ver más</a></p>
-						        <p class="text-center margen-top-medio">
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
-						        </p>
-						      </div>
-						     </div>
-		        		</div>
-		        		<div class="col-md-3 relleno-lateral-q">
-		        			<div class="thumbnail">
-						      <img src="{% static 'img/ralph.png' %}" width="100%" style="height:200px !important" class="img-slider">
-						      <div class="caption">
-						        <h4 class="text-center">RALPH PEREDA</h4>
-						        <h5 class="text-center margen-top-medio color-texto-silver">Contract Specialist</h5>
-						        <p class="text-center margen-top-medio">Comptroller. Mr. Pereda joined SRS with a successful track record in regional sales management and customer service for Fortune 100 Companies, throughout Latin America and the Caribbean.  His role as Contract Specialist ensures that all projects are in compliance, within budget and delivered on time ... <a href="#">Ver más</a></p>
-						        <p class="text-center margen-top-medio">
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a> 
-						        	<a href="#" class="btn btn-default btn-xs" role="button">
-						        		<span class="glyphicon glyphicon-star"></span>
-						        	</a>
-						        </p>
-						      </div>
-						    </div>
-		        		</div>
+
+		        		{% empty %}
+		        		<div class="alert alert-warning text-center" role="alert">
+							<b>Empty list of Team Members!</b> - <a href="/admin">Add Team Members.</a>
+						</div>
+
+		        		{% endfor%}
+
+		        		
 		        	</div>
 		        	
 
-		        </li>
-		        
-		    </ul>
-		</div>
+		       
+		
 	<div>
 	
 </section>
-<div class="contenedor-arrow-team">
-			<button href="#" class="unslider-arrow prev"><span class="icon-arrow-left"></span></button>
-			<button href="#" class="unslider-arrow next"><span class="icon-uniE601"></span></button>
-		</div>
+
 
 <section id="about-cont">
 	<div class="container-srs">
