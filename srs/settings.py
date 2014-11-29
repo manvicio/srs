@@ -8,6 +8,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = "jhonazsh.17@gmail.com"
+EMAIL_HOST_PASSWORD = "medina11"
+EMAIL_PORT = 587
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from unipath import Path
 BASE_DIR = Path(__file__).ancestor(2)
@@ -100,3 +106,4 @@ MEDIA_ROOT = BASE_DIR.child('media')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR.child('static')]
 STATIC_ROOT = "/webapps/srs/static/"
+

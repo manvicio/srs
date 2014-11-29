@@ -44,13 +44,13 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 margen-top-dos">
-				<form class="form-horizontal">
+				<div class="form-horizontal">
 				  <div class="form-group">
 				    <div class="col-sm-12">
 				    	<label for="interest">I'M INTERESTED IN<span class="color-texto-sunflower">*</span></label>
 				    </div>
 				    <div class="col-sm-12">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="interested">
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -62,10 +62,10 @@
 				    	<label for="interest">LAST NAME</label>
 				    </div>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="first-name">
 				    </div>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="last-name">
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -77,10 +77,10 @@
 				    	<label for="telephone">TELEPHONE</label>
 				    </div>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="email">
 				    </div>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="telephone">
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -91,10 +91,10 @@
 				    	<label for="address">ADDRESS</label>
 				    </div>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="company">
 				    </div>
 				    <div class="col-xs-6">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="address">
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -108,13 +108,13 @@
 				    	<label for="country">COUNTRY</label>
 				    </div>
 				    <div class="col-xs-4">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="city">
 				    </div>
 				    <div class="col-xs-4">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="state">
 				    </div>
 				    <div class="col-xs-4">
-				      <input type="text" class="form-control">
+				      <input type="text" class="form-control" id="country">
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -122,7 +122,7 @@
 				    	<label for="Learn">HOW DID YOU LEARN ABOUT OUR SITE?</label>
 					</div>
 				    <div class="col-xs-12">
-				      <textarea class="form-control" rows="3"></textarea>
+				      <textarea class="form-control" rows="3" id="how"></textarea>
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -130,7 +130,7 @@
 				    	<label for="comments">COMMENTS/QUESTIONS<span class="color-texto-sunflower">*</span></label>
 				    </div>
 				    <div class="col-xs-12">
-				      <textarea class="form-control" rows="3"></textarea>
+				      <textarea class="form-control" rows="3" id="comments"></textarea>
 				    </div>
 				  </div>					  		  
 				  <div class="form-group">
@@ -139,9 +139,68 @@
 				    </div>
 				  </div>
 
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
+{% endblock %}
+
+{% block js %}
+
+<script>
+
+$('.btn-default-customize').click(function(){
+	var contactUsData = {
+		interested: $('#interested').val(),
+		firstname: $('#first-name').val(),
+		lastname: $('#last-name').val(),
+		email: $('#email').val(),
+		telephone: $('#telephone').val(),
+		company: $('#company').val(),
+		address: $('#address').val(),
+		city: $('#city').val(),
+		state: $('#state').val(),
+		country: $('#country').val(),
+		how: $('#how').val(),
+		comments: $('#comments').val()
+	}
+
+	console.log(contactUsData)
+
+	$.ajaxSetup({ 
+		     beforeSend: function(xhr, settings) {
+		         function getCookie(name) {
+		             var cookieValue = null;
+		             if (document.cookie && document.cookie != '') {
+		                 var cookies = document.cookie.split(';');
+		                 for (var i = 0; i < cookies.length; i++) {
+		                     var cookie = jQuery.trim(cookies[i]);
+		                     // Does this cookie string begin with the name we want?
+		                 if (cookie.substring(0, name.length + 1) == (name + '=')) {
+		                     cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		                     break;
+		                 }
+		             }
+		         }
+		         return cookieValue;
+		         }
+		         if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+		             // Only send the token to relative URLs i.e. locally.
+		             xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+		         }
+		     } 
+		});
+
+	$.ajax({
+		data: contactUsData,
+		url: '/send-contact-us-email/',
+		type: 'POST'
+		
+	});
+});
+
+
+</script>
+
 {% endblock %}
