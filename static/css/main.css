@@ -27,6 +27,15 @@ a:hover{
   color: #f1c40f;
 }
 
+.relleno-both{
+  padding: 0 5em;
+}
+
+.medio{
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
 .cont-logo-super,
 .cont-logo-derecho {
   padding: 0.5em 0;
@@ -48,6 +57,7 @@ a:hover{
   padding: 3em 0;
 }
 
+/* Navbar Customzado */
 .navbar-default{
   background-color: #34495e;
   border-color: rgba(231, 231, 231, 0);
@@ -60,6 +70,22 @@ a:hover{
 .navbar-default .navbar-nav li a:hover{
   color: #f1c40f;
 }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #2D2A2A;
+}
+
+.navbar-default .navbar-toggle {
+border-color: #6F6D6D;
+}
+
+.navbar-default .navbar-brand{
+  display: none;
+}
+
+
+
+/* ----------------- */
 
 .bg-color-sunflower{
   background-color: #f1c40f;
@@ -116,6 +142,47 @@ a:hover{
 
 .footer{
   background-color: #34495e;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px){
+  .relleno-both{
+    padding: 0 2em;
+  }
+  
+  .li-mobile:first-child{
+    border-top: 0px;
+  }
+
+  .li-mobile{
+    border-top: 1px solid #6F6D6D;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+   border-color: #6F6D6D;
+   border-top: 1px solid #6F6D6D;
+  }
+
+  .navbar-default .navbar-brand{
+    display: block;
+    position: absolute;
+
+  }
+
+  .navbar-default .navbar-brand>img{
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 350px;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .navbar-default .navbar-brand>img{
+    width: 250px;
+  }
 }
     
 

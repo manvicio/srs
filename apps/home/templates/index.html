@@ -18,7 +18,7 @@
 
 {% block main %}
 <header id="header-slider">
-	<img src="{% static 'img/main-foto.jpg' %}" width="100%" height="575px">
+	<img src="{% static 'img/main-foto.jpg' %}" width="100%" height="575px" class="imagen-responsiva">
 
 	<div id="subheader">
 		<div id="subheader-true">
@@ -27,7 +27,7 @@
 					<img src="{% static 'img/logo-b.png' %}" alt="">
 				</div>
 				<div class="col-md-5">
-					<div id="name" class="color-texto-blanco">
+					<div id="name" class="color-texto-blanco titulo-responsive">
 						<h2>HIGHER STANDARDS IN ENGINEERING</h2>
 						<h4>FULL SERVICE CIVIL ENGINEERING CONSULTING FIRM</h4>
 					</div>
@@ -45,10 +45,32 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="margen-bottom-medio">KEY PROJECTS</h1>
+				<h1 class="margen-bottom-medio key">KEY PROJECTS</h1>
 			</div>
 		</div>
 	</div>
+	
+	<div class="contenedor-proyectos-true">
+		{% for proyecto in proyectos %}
+			<div class="col-md-12 margen-bottom-medio">
+			    <figure>
+					<img src="{{MEDIA_URL}}{{proyecto.imagen}}" width="100%" class="img-responsive">
+				</figure>
+			    <p class="color-texto-sunflower nombre-proyecto-key">
+					<b>{{proyecto.nombre_proyecto}}</b>
+				</p>
+			</div>
+		{%empty%}
+
+			<div class="alert alert-warning text-center" role="alert">
+				<b>Empty list of Key Projects!</b> - <a href="/admin">Add Projects.</a>
+			</div>
+
+		{% endfor %}
+	</div>
+
+
+
 	<div class="slider-principal-true">
 		{% if proyectos %}
 		<div class="banner">
@@ -85,6 +107,9 @@
 			<button href="#" class="unslider-arrow next"><span class="icon-uniE601"></span></button>
 		</div>
 
+	
+
+
 	{% else %}
 		<div class="alert alert-warning text-center" role="alert">
 			<b>Empty list of Key Projects!</b> - <a href="/admin">Add Projects.</a>
@@ -92,6 +117,7 @@
 
 	{% endif %}
 
+	
 	
 </section>
 	

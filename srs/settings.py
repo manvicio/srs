@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = "jhonazsh.17@gmail.com"
-EMAIL_HOST_PASSWORD = "medina11"
+EMAIL_HOST_PASSWORD = "occtubre6"
 EMAIL_PORT = 587
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

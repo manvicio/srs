@@ -103,9 +103,11 @@
 .color-texto-blanco {
   color: #fff;
 }
-.slider-principal-true {
+.slider-principal-true{
   background-color: #ecf0f1;
   padding: 2.5em;
+  overflow: hidden;
+  height: auto;
 }
 .unslider-arrow {
   border: 0;
@@ -145,4 +147,74 @@
 .btn-default-customize {
   background-color: #f1c40f;
   border: 0;
+}
+
+/* Media Queries home */
+@media screen and (min-width: 768px){
+  .contenedor-proyectos-true{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  #adorno, #logo{
+    display: none;
+  }
+
+  #header-slider #subheader{
+    top: 335px;
+  }
+
+  .imagen-responsiva{
+    height: 450px;
+  }
+
+  .slider-principal-true, .contenedor-arrow{
+    display: none;
+  }
+
+  .contenedor-proyectos-true{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  .nombre-proyecto-key{
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .imagen-responsiva{
+    height: 350px;
+  }
+
+  #header-slider #subheader{
+    top: 250px;
+    height: 150px;
+  }
+
+  .titulo-responsive{
+    text-align: center;
+  }
+
+  .titulo-responsive>h4{
+    font-size: 0.8em;
+    margin-top: 1em;
+  }
+
+  #header-slider{
+    height: 360px;
+  }
+
+  .key{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  
+
+  
 }
