@@ -184,6 +184,45 @@
     font-size: 1.2em;
   }
 
+  #title-team, #cont-team{
+    height: auto;
+  }
+
+  #title-team{
+    padding-top: 0;
+    border-bottom: 0;
+  }
+
+  #cont-team{
+    padding-top: 1em;
+    border-left: 0px;
+    padding-left: 15px;
+    text-align: justify;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #d9dada;
+  }
+
+  #principal-group{
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+  }
+
+  #about-cont #about{
+    padding-top: 1.5em;
+  }
+
+  #title-about{
+    padding-bottom: 1em;
+  }
+
+  .margen-top-dos{
+    margin-top: 1em;
+  }
+
+  .just-responsive{
+    text-align: justify;
+  }
+
 }
 
 @media screen and (max-width: 480px){
@@ -214,7 +253,9 @@
     text-align: center;
   }
 
-  
+  .col-xs-6{
+    width: 100%;
+  }
 
   
 }
