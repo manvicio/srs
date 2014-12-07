@@ -140,13 +140,17 @@
 .btn-customize {
   border-radius: 0px;
   padding: 2px 16px;
-  margin-left: 7em;
+  /*margin-left: 7em;*/
   font-size: 16px;
   letter-spacing: 1px;
 }
 .btn-default-customize {
   background-color: #f1c40f;
   border: 0;
+}
+
+.lista{
+  margin-bottom: 1em;
 }
 
 /* Media Queries home */
@@ -184,16 +188,16 @@
     font-size: 1.2em;
   }
 
-  #title-team, #cont-team{
-    height: auto;
+  #title-team, #cont-team, #title-careers, #cont-img-careers{
+    height: auto !important;
   }
 
-  #title-team{
+  #title-team, #title-careers{
     padding-top: 0;
     border-bottom: 0;
   }
 
-  #cont-team{
+  #cont-team, #cont-img-careers{
     padding-top: 1em;
     border-left: 0px;
     padding-left: 15px;
@@ -202,7 +206,7 @@
     border-bottom: 1px solid #d9dada;
   }
 
-  #principal-group{
+  #principal-group, #principal-careers{
     padding-top: 3em;
     padding-bottom: 1.5em;
   }
@@ -228,6 +232,10 @@
 @media screen and (max-width: 480px){
   .imagen-responsiva{
     height: 200px;
+  }
+
+  .img-responsive-2{
+    height: 220px !important;
   }
 
   #header-slider #subheader{
