@@ -43,8 +43,8 @@
 	<div class="container">
 		<div class="row margen-top-dos">
 			<div class="col-md-6">
-				<img src="{% static 'img/layer1.png' %}" width="100%" height="350px">
-				<h1 class=" text-center margen-top-uno"><a href="/services" class="color-texto-sunflower a-null">SERVICES</a></h1>
+				<img src="{% static 'img/layer1.png' %}" width="100%" height="350px" class="img-responsive">
+				<h1 class=" text-center margen-top-uno margen-responsive"><a href="/services" class="color-texto-sunflower a-null ">SERVICES</a></h1>
 				<p class="text-justify margen-top-uno">
 					{% if text_services %}
 						{% for text in text_services %}
@@ -57,7 +57,7 @@
 					
 					{% endif %}
 				</p>
-				<div class="lista margen-top-uno text-center">
+				<div class="lista margen-top-uno text-center list-responsive">
 					
 						<p>SERVICES OFFERED</p>
 						<p>LICENSES AND CERTIFICATIONS</p>
@@ -66,8 +66,8 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<img src="{% static 'img/layer6.png' %}" width="100%" height="350px">
-				<h1 class="color-texto-sunflower text-center margen-top-uno">PROJECTS</h1>
+				<img src="{% static 'img/layer6.png' %}" width="100%" height="350px" class="img-responsive">
+				<h1 class="color-texto-sunflower text-center margen-top-uno margen-responsive">PROJECTS</h1>
 				<p class="text-justify margen-top-uno">
 					{% if text_projects %}
 						{% for text in text_projects %}
@@ -79,7 +79,7 @@
 						</div>
 					{% endif %}
 				</p>
-				<div class="lista margen-top-uno text-center">
+				<div class="lista margen-top-uno text-center list-responsive">
 						{% if projects %}
 							{% for project in projects %}
 								<p>{{project.nombre_proyecto}}</p>

@@ -262,5 +262,12 @@
     height: 150px;
   }
 
+  .list-responsive{
+    margin-bottom: 1.2em;
+  }
+
+  .margen-responsive{
+    margin-top: 0.5em
+  }
   
 }
