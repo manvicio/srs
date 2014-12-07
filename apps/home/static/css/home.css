@@ -227,12 +227,13 @@
 
 @media screen and (max-width: 480px){
   .imagen-responsiva{
-    height: 350px;
+    height: 200px;
   }
 
   #header-slider #subheader{
     top: 250px;
     height: 150px;
+    background-color: #34495e;
   }
 
   .titulo-responsive{
@@ -255,6 +256,10 @@
 
   .col-xs-6{
     width: 100%;
+  }
+
+  #header-portada{
+    height: 150px;
   }
 
   

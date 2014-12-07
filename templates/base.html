@@ -16,7 +16,6 @@
         <style>
             body {
                 padding-top: 50px;
-                padding-bottom: 20px;
             }
         </style>
         <!--<link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">-->
@@ -110,7 +109,14 @@
 		{% endblock %}
 
     <footer id="footer">
-      
+      <div class="container-srs">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center color-texto-sunflower">
+            SRS Engineering, Inc., 5001 SW 74th Court, Suite 201, Miami, Florida  33155<br>
+            phone: 305-662-8887, fax: 305-662-8858, EB-00007317.<br> ®2007 SRS Engineering, Inc. All Rights Reserved.
+          </div>
+        </div>
+      </div>
     </footer>
 
       
@@ -120,6 +126,11 @@
         <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
 
         <script src="{% static 'js/main.js' %}"></script>
+
+        <script>
+
+          
+        </script>
 
     {% block js %}
     {% endblock %}

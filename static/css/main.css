@@ -71,6 +71,10 @@ a:hover{
   color: #f1c40f;
 }
 
+.navbar-default .navbar-nav li .activo{
+  color: #f1c40f;
+}
+
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color: #2D2A2A;
 }
@@ -140,7 +144,7 @@ border-color: #6F6D6D;
   padding: 2em 2em;
 }
 
-.footer{
+#footer{
   background-color: #34495e;
 }
 
@@ -185,7 +189,11 @@ border-color: #6F6D6D;
   }
 
   .font-size-4-3{
-    font-size: 3.3em;
+    font-size: 2.8em;
+  }
+
+  .font-size-3{
+    font-size: 2em;
   }
 
 
